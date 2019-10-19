@@ -22,13 +22,13 @@ public class ClientUDP {
         String IP_address;
         int UDP_port;
         String request,answer;
-        UDPClientSocket client = new UDPClientSocket();;
+        UDPClientSocket client;
         
         IP_address="127.0.0.1";
         UDP_port=7;
-        request="ciao";
+        request="Tutto apposto";
         
-        
+        client = new UDPClientSocket();
         answer = client.sendAndRecive(request, IP_address, UDP_port);
         System.out.println("ho ricevuto in risposta: " + answer);
         client.close_socket();
